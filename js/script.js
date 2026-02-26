@@ -29,22 +29,7 @@ async function CarregarPokemon() {
             `;
             listaPokemon.appendChild(pokemonDiv);
         }
-        const inputPesquisa = document.getElementById("pesquisa");
-
-inputPesquisa.addEventListener("input", function() {
-    const valor = inputPesquisa.value.toLowerCase();
-    const cards = document.querySelectorAll("#lista-pokemon .col-md-3");
-
-    cards.forEach(card => {
-        const nome = card.querySelector(".card-title").textContent.toLowerCase();
-
-        if (nome.includes(valor)) {
-            card.style.display = "block";
-        } else {
-            card.style.display = "none";
-        }
-    });
-});
+        
         
     } catch (error) {
         console.error("Erro ao carregar os pokemons:", error);
